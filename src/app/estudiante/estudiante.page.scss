@@ -1,0 +1,28 @@
+ion-toolbar {
+    --background: rebeccapurple;
+    color: white;
+}
+
+ion-back-button {
+    color:white
+}
+
+ion-content{
+    --background:darkorange;
+  }
+
+
+ion-text{
+    align-self: center;
+}
+
+.container {
+  img{
+      height: 70px;
+      margin-top: 45%;
+  }
+}
+
+#btn1 {
+    --background: rebeccapurple;
+}

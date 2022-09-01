@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>Bienvenido</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container ion-text-center">
+    <img src="assets/logo.png">
+    <br>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button expand="block" id="btn1" (click)="abrirCamara()">REGISTRAR ASISTENCIA</ion-button>
+        <br>
+        <ion-button [routerLink]="['/home']" expand="block" color="danger">CERRAR SESIÓN</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  
+</ion-content>
+

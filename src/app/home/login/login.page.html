@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>RegistrAPP</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div class="container ion-text-center">
+        <img src="assets/logo.png">
+      </div>
+      <div class="ion-text-center">
+        <ion-card-title>ACCESO</ion-card-title>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Usuario:</ion-label>
+          <ion-input formControlName="user"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña:</ion-label>
+          <ion-input formControlName="pass" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()" id="btn3" expand="block">INGRESAR</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+
+    <ion-button [routerLink]="['/registro']" expand="block" id="btn6">REGISTRARSE</ion-button>
+
+  </ion-toolbar>
+</ion-footer>
+

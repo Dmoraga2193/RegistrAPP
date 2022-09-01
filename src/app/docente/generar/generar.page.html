@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>RegistrAPP</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div class="container ion-text-center">
+        <img src="assets/logo.png">
+      </div>
+      <div class="ion-text-center">
+        <ion-card-title>Crear control de asistencia</ion-card-title>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form>
+        <ion-item>
+          <ion-label position="fixed">Fecha:</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Hora:</ion-label>
+          <ion-input type="time"></ion-input>
+        </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-select placeholder="Curso:">
+              <ion-select-option value="1">Base de datos</ion-select-option>
+              <ion-select-option value="2">BPM</ion-select-option>
+              <ion-select-option value="3">Emprendimiento</ion-select-option>
+              <ion-select-option value="4">Estadistica</ion-select-option>
+              <ion-select-option value="5">Etica</ion-select-option>
+              <ion-select-option value="6">Inglés</ion-select-option>
+              <ion-select-option value="7">Portafolio</ion-select-option>
+              <ion-select-option value="8">Programación</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-item>
+          <ion-label position="fixed">Sección:</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button id="btn" (click)="showCodigo()" expand="block">GENERAR CÓDIGO QR</ion-button>
+    </ion-card-content>
+  </ion-card> 
+
+  
+</ion-content>

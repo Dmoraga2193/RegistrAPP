@@ -1,0 +1,25 @@
+ion-content{
+  --background:darkorange;
+}
+
+.container {
+  img{
+      height: 100px;
+      margin-top: 60%;
+  }
+}
+
+ion-text {
+  color: rebeccapurple;
+  font-size: x-large;
+  font-weight: bolder;
+  align-self: center;
+}
+
+#btn1 {
+  --background: rebeccapurple;
+}
+
+#btn2 {
+  --background: gray;
+}
