@@ -8,6 +8,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
   styleUrls: ['./generar.page.scss'],
 })
 export class GenerarPage implements OnInit {
+  
 
   constructor(private loadingCtrl: LoadingController, public alertController: AlertController) { }
 

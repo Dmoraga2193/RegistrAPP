@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
 import { ElementFinder } from 'protractor';
 
@@ -15,7 +16,8 @@ export class LoginPage implements OnInit {
   constructor(
     public fb: FormBuilder, 
     public alertController: AlertController,
-    public navCtrl: NavController) {
+    public navCtrl: NavController,
+    public router:Router) {
 
     //Formulario de Ingreso
     this.formularioLogin = this.fb.group({
@@ -31,6 +33,11 @@ export class LoginPage implements OnInit {
   }
 
   async ingresar(){
+
+    let navigationExtras: NavigationExtras = {
+      state: {user: this.formularioLogin.value.user}
+    };
+
     var f = this.formularioLogin.value;
 
     var usuario = JSON.parse(localStorage.getItem('usuario'));
@@ -39,9 +46,11 @@ export class LoginPage implements OnInit {
       console.log('Ingresado');
       localStorage.setItem('ingresado','true');
       if(usuario.cod == 666){
-        this.navCtrl.navigateRoot('docente');
+        this.router.navigate(['/docente'],navigationExtras);
+        //this.navCtrl.navigateRoot('docente');
       }else{
-        this.navCtrl.navigateRoot('estudiante');
+        this.router.navigate(['/estudiante'],navigationExtras);
+        //this.navCtrl.navigateRoot('estudiante');
       }
     }else{
       const alert = await this.alertController.create({
@@ -54,6 +63,8 @@ export class LoginPage implements OnInit {
       return;
     }
   }
+
+
   
 
 }
