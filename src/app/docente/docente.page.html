@@ -4,7 +4,7 @@
       <ion-back-button text=""></ion-back-button>
     </ion-buttons>
     <div class="ion-text-center">
-      <ion-title>Bienvenido : {{userName}}</ion-title>
+      <ion-title>Bienvenido : {{userName}} -- {{tituloAPI}}</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -17,9 +17,10 @@
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/generar']" expand="block" id="btn1">CONTROL DE ASISTENCIA</ion-button>
+        <ion-button [routerLink]="['/generar']"  expand="block" id="btn1">CONTROL DE ASISTENCIA</ion-button>
         <br>
         <ion-button [routerLink]="['/home']" expand="block" color="danger">CERRAR SESIÓN</ion-button>
+        <ion-button id="btn" (click)="mostrar()" expand="block">MOSTRAR</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid> 
