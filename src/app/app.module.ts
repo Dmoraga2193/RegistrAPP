@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
+import { Camera } from '@awesome-cordova-plugins/camera/ngx';
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,8 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,HttpClientModule,
   ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [Camera,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
