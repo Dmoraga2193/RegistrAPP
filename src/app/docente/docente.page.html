@@ -10,17 +10,24 @@
 </ion-header>
 
 <ion-content>
-  <div class="container ion-text-center">
-    <img src="assets/logo.png">
-  </div>
+  <ion-card-header>
+    <div class="container ion-text-center">
+      <img src="assets/logo.png">
+    </div>
+    <div class="ion-text-center">
+      <ion-card-title>Usuario: {{userName}}</ion-card-title>
+      <br>
+      <ion-card-content>{{tituloAPI}}</ion-card-content>
+    </div>
+  </ion-card-header>
   <br>
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/generar']"  expand="block" id="btn1">CONTROL DE ASISTENCIA</ion-button>
-        <br>
-        <ion-button [routerLink]="['/home']" expand="block" color="danger">CERRAR SESIÓN</ion-button>
         <ion-button id="btn" (click)="mostrar()" expand="block">MOSTRAR</ion-button>
+        <ion-button id="btn" (click)="actualizar()" expand="block">ACTUALIZAR</ion-button>
+        <ion-button [routerLink]="['/generar']"  expand="block" id="btn1">CONTROL DE ASISTENCIA</ion-button>
+        <ion-button [routerLink]="['/home']" expand="block" color="danger">CERRAR SESIÓN</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid> 

@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <ion-title>RegistrAPP</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div class="container ion-text-center">
+        <img src="assets/logo.png">
+      </div>
+      <div class="ion-text-center">
+        <ion-card-title>Datos ingresados:</ion-card-title>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div>
+        <ion-card-content>Fecha: {{fechaClase}}</ion-card-content>
+        <ion-card-content>Hora: {{horaClase}}</ion-card-content>
+        <ion-card-content>Curso: {{cursoClase}}</ion-card-content>
+        <ion-card-content>Sección: {{seccClase}}</ion-card-content>
+      </div>
+     
+      <br>
+      <ion-grid>
+        <ion-row>
+          <ion-col align-self-center>
+            <ion-button id="btn" (click)="showCodigo()" expand="block">GENERAR CÓDIGO QR</ion-button>
+            <ion-button [routerLink]="['/generar']" expand="block" color="danger">CANCELAR</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+    </ion-card-content>
+  </ion-card> 
+
+</ion-content>

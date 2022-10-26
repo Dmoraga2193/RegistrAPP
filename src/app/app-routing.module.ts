@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { AuthGuardService } from './service/auth-guard.service';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuardService]
   },
   {
     path: 'splash',
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'generar',
     loadChildren: () => import('./docente/generar/generar.module').then( m => m.GenerarPageModule)
+  },
+  {
+    path: 'qr',
+    loadChildren: () => import('./docente/generar/qr/qr.module').then( m => m.QrPageModule)
   },
 ];
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(
     private platform: Platform,
-    public router: Router
+    public router: Router,
+    private storage: Storage
   ) {
     this.iniciarApp();
   }
@@ -21,5 +22,11 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.router.navigateByUrl('splash');
     });
+  }
+
+  async ngOnInit() {
+    // If using a custom driver:
+    // await this.storage.defineDriver(MyCustomDriver)
+    await this.storage.create();
   }
 }

@@ -21,36 +21,36 @@
     </ion-card-header>
 
     <ion-card-content>
-      <form>
+      <form [formGroup]="formularioClase">
         <ion-item>
           <ion-label position="fixed">Fecha:</ion-label>
-          <ion-input type="date"></ion-input>
+          <ion-input type="date" formControlName="fecha"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="fixed">Hora:</ion-label>
-          <ion-input type="time"></ion-input>
+          <ion-input type="time" formControlName="hora"></ion-input>
         </ion-item>
         <ion-list>
           <ion-item>
-            <ion-select placeholder="Curso:">
-              <ion-select-option value="1">Base de datos</ion-select-option>
-              <ion-select-option value="2">BPM</ion-select-option>
-              <ion-select-option value="3">Emprendimiento</ion-select-option>
-              <ion-select-option value="4">Estadistica</ion-select-option>
-              <ion-select-option value="5">Etica</ion-select-option>
-              <ion-select-option value="6">Inglés</ion-select-option>
-              <ion-select-option value="7">Portafolio</ion-select-option>
-              <ion-select-option value="8">Programación</ion-select-option>
+            <ion-select placeholder="Curso:" formControlName="curso">
+              <ion-select-option value="Base de datos">Base de datos</ion-select-option>
+              <ion-select-option value="BPM">BPM</ion-select-option>
+              <ion-select-option value="Emprendimiento">Emprendimiento</ion-select-option>
+              <ion-select-option value="Estadistica">Estadistica</ion-select-option>
+              <ion-select-option value="Etica">Etica</ion-select-option>
+              <ion-select-option value="Inglés">Inglés</ion-select-option>
+              <ion-select-option value="Portafolio">Portafolio</ion-select-option>
+              <ion-select-option value="Programación">Programación</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-list>
         <ion-item>
           <ion-label position="fixed">Sección:</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="secc"></ion-input>
         </ion-item>
       </form>
       <br>
-      <ion-button id="btn" (click)="showCodigo()" expand="block">GENERAR CÓDIGO QR</ion-button>
+      <ion-button id="btn" (click)="guardarClase()" expand="block">GENERAR CLASE</ion-button>
     </ion-card-content>
   </ion-card> 
 
